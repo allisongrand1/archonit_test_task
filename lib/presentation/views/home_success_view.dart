@@ -33,7 +33,7 @@ class HomeSuccessView extends StatelessWidget {
         }
 
         final coin = coins[index];
-        var color = colorController.getRandomColor;
+        var color = colorController.getRandomColor(index);
 
         return CoinTile(symbol: coin.symbol, priceUsd: coin.priceUsd, color: color);
       },

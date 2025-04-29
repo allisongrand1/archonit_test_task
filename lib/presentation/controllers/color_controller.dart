@@ -1,15 +1,13 @@
-import 'dart:math';
 import 'dart:ui';
 
 class ColorController {
-  final Random random;
 
-  ColorController() : random = Random();
+  ColorController();
 
-  Color get getRandomColor {
-    final int red = random.nextInt(256);
-    final int green = random.nextInt(256);
-    final int blue = random.nextInt(256);
+   Color  getRandomColor (int index){
+    final int red = (index * 80) % 256;
+   final int green = (index * 100) % 256;
+   final int blue = (index * 200) % 256;
 
     return Color.fromARGB(255, red, green, blue).withValues(alpha: 0.1);
   }
